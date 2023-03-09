@@ -21,7 +21,7 @@ import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 import 'package:date_format/date_format.dart';
 import 'package:intl/intl.dart';
 import 'fetch_data.dart' as globals;
-import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
+// import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
 
 
 
@@ -2272,16 +2272,7 @@ class _Tutorial extends State<Tutorial> {
             height: 6,
           ),
           ElevatedButton(
-            onPressed: () => {
-              // We need to prepare the test PDF, and then we can display the PDF.
-              prepareTestPdf().then((path) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FullPdfViewerScreen(path)),
-                );
-              })
-            },
+            onPressed: () => {},
             child: const Text('Open Flip Book'),
           ),
         ]
@@ -2292,23 +2283,23 @@ class _Tutorial extends State<Tutorial> {
   }
 }
 
-class FullPdfViewerScreen extends StatelessWidget {
-  final String pdfPath;
+// class FullPdfViewerScreen extends StatelessWidget {
+//   final String pdfPath;
 
-  FullPdfViewerScreen(this.pdfPath);
+//   FullPdfViewerScreen(this.pdfPath);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        width: 500,
-        height: 500,
-        child:PDFViewerScaffold(
-        appBar: AppBar(
-          title: Text("Flip Book"),
-        ),
-        path: pdfPath));
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//         width: 500,
+//         height: 500,
+//         child:PDFViewerScaffold(
+//         appBar: AppBar(
+//           title: Text("Flip Book"),
+//         ),
+//         path: pdfPath));
+//   }
+// }
 
 
 class DataAnalyze extends StatelessWidget {
